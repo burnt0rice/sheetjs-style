@@ -9190,6 +9190,8 @@ return function parse_sty_xml(data, themes, opts) {
 };
 })();
 
+var style_builder;
+	
 var STYLES_XML_ROOT = writextag('styleSheet', null, {
 	'xmlns': XMLNS.main[0],
 	'xmlns:vt': XMLNS.vt
@@ -21600,8 +21602,8 @@ var StyleBuilder = function (options) {
 
 
 	// cache style specs to avoid excessive duplication
-	_hashIndex = {};
-	_listIndex = [];
+	var _hashIndex = {};
+	var _listIndex = [];
 
 	return {
 
